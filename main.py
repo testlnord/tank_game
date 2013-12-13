@@ -146,22 +146,21 @@ class Game:
                     level[-1]+= 'w'
                     wall_len -= 1
                 else:
-                    if tank_count > 0:
+                    if tank_count > 0 and x < 7:
                         if random.random() < 0.2:
                             level[-1] += 't'
                             tank_count -= 1
-                        elif random.random() < 0.2:
-                            wall_len = random.randint(1,5)
-                            level[-1] += ' '
+                            continue
+                    if random.random() < 0.2:
+                        wall_len = random.randint(1,5)
                     level[-1] += ' '
-        base_pos = (random.randint(1, 14),random.randint(2, 10))
+        base_pos = (8,11)
         if players == 1:
             level[base_pos[1]-2] = level[base_pos[1]-2][0:base_pos[0]-1]+'p  '+level[base_pos[1]-2][base_pos[0]+1:]
         else:
             level[base_pos[1]-2] = level[base_pos[1]-2][0:base_pos[0]-1]+'p p'+level[base_pos[1]-2][base_pos[0]+1:]
         level[base_pos[1]-1] = level[base_pos[1]-1][0:base_pos[0]-1]+'www'+level[base_pos[1]-1][base_pos[0]+1:]
         level[base_pos[1]] = level[base_pos[1]][0:base_pos[0]-1]+'wbw'+level[base_pos[1]][base_pos[0]+1:]
-        level[base_pos[1]+1] = level[base_pos[1]+1][0:base_pos[0]-1]+'www'+level[base_pos[1]+1][base_pos[0]+1:]
         for y,line in enumerate(level):
             for x,c in enumerate(line):
                 if c == 'p':

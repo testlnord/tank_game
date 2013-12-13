@@ -70,6 +70,6 @@ class Player(movables.Tank):
             self.game.player_die(self.number)
 
     def immortal(self):
-        self.immortality = 20
+        self.immortality = 60
         self.imm_anim = items.ImmortalAnim(self.game,0,0)
         self.imm_anim.rect = self.rect
