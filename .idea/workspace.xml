@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6254aac-98c9-4fa2-a47c-b5ba48a856f7" name="Default" comment="" />
+    <list default="true" id="e6254aac-98c9-4fa2-a47c-b5ba48a856f7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/level.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/explosion.bmp" afterPath="$PROJECT_DIR$/images/explosion.bmp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items.py" afterPath="$PROJECT_DIR$/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movables.py" afterPath="$PROJECT_DIR$/movables.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.py" afterPath="$PROJECT_DIR$/player.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="tank_game.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +20,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/tank_game$main.coverage" NAME="main Coverage Results" MODIFIED="1386448651542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tank_game$main.coverage" NAME="main Coverage Results" MODIFIED="1386945891750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,7 +37,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1590">
+            <state line="83" column="41" selection-start="2425" selection-end="2425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3750">
               <folding />
             </state>
           </provider>
@@ -38,7 +46,7 @@
       <file leaf-file-name="player.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="14" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="359" max-vertical-offset="930">
+            <state line="28" column="15" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
@@ -47,16 +55,27 @@
       <file leaf-file-name="movables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/movables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
+            <state line="19" column="31" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2130">
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="38" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="2430">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/items.py">
+      <file leaf-file-name="level.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/level.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="44" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.69926196" vertical-offset="581" max-vertical-offset="1335">
+            <state line="7" column="7" selection-start="85" selection-end="85" vertical-scroll-proportion="0.29577464" vertical-offset="0" max-vertical-offset="355">
               <folding />
             </state>
           </provider>
@@ -81,10 +100,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/images/movables.py" />
-        <option value="$PROJECT_DIR$/items.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/level.txt" />
         <option value="$PROJECT_DIR$/movables.py" />
         <option value="$PROJECT_DIR$/player.py" />
+        <option value="$PROJECT_DIR$/items.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -119,7 +139,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,6 +159,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,14 +420,14 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298479" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67192984" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29166666" sideWeight="0.67142856" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986014" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.30526316" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3007576" sideWeight="0.44561404" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982456" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3007576" sideWeight="0.2263158" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32807016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -431,31 +451,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="30" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="46" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0" vertical-offset="1069" max-vertical-offset="1605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="33" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1155">
@@ -480,7 +479,9 @@
     <entry file="file://$PROJECT_DIR$/movables.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1500">
-          <folding />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -508,7 +509,9 @@
     <entry file="file://$PROJECT_DIR$/movables.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="0" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1140">
-          <folding />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -519,30 +522,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file:///usr/lib/python2.7/dist-packages/pygame/sprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1500">
+        <state line="1336" column="33" selection-start="49897" selection-end="49897" vertical-scroll-proportion="0.33333334" vertical-offset="19891" max-vertical-offset="21405">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/share/pyshared/pygame/sprite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="12" selection-start="6707" selection-end="6707" vertical-scroll-proportion="0.62184876" vertical-offset="2178" max-vertical-offset="21405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="14" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="359" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
+        <state line="28" column="15" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="44" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.69926196" vertical-offset="581" max-vertical-offset="1335">
+        <state line="145" column="38" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2130">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="41" selection-start="2425" selection-end="2425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="7" selection-start="85" selection-end="85" vertical-scroll-proportion="0.29577464" vertical-offset="0" max-vertical-offset="355">
           <folding />
         </state>
       </provider>

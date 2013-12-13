@@ -3,56 +3,73 @@ import items
 import pygame
 import movables
 
-class Player(items.Item):
-    def __init__(self, game,  x, y):
-        items.Item.__init__(self,game,x,y)
-        self.img = pygame.image.load("player.bmp") # Картинка объекта
-        self.w = 20
-        self.h = 20
+class Player(movables.Tank):
+    buttons = [{'up': pygame.K_UP, 'down': pygame.K_DOWN,
+                'left': pygame.K_LEFT, 'right': pygame.K_RIGHT,
+                'shoot': pygame.K_KP_ENTER},
+               {'up': pygame.K_w, 'down': pygame.K_s,
+                'left': pygame.K_a, 'right': pygame.K_d,
+                'shoot': pygame.K_SPACE},
+               ]
+    def __init__(self, game,  x, y, number):
+        super(Player, self).__init__(game, x, y)
+        #items.Item.__init__(self,game,x,y)
+        self.anim = pygame.Surface((256, 32))
+        all_tanks = pygame.image.load("images/tanks.bmp") # Картинка объекта
+        self.anim.blit(all_tanks,(0,0), (0,number*32,256,32))
+
+        self.image.blit(self.anim, (0,0))
+        self.rect = pygame.Rect(x, y, 32, 32)
         self.max_speed = 10
-        self.speed = (0,0)
-        self.dir = self.game.UP
+        self.dir = self.game.RIGHT
+        self.speed = 0
+        self.number = number
+        self.immortality = 0
 
     def do(self, event):
-        if event.key == pygame.K_UP: #273 код клавиши вверх
-            self.speed = (0, -self.max_speed)
+        if event.key == self.buttons[self.number]['up']:
             self.dir = self.game.UP
-        if event.key == pygame.K_DOWN:
-            self.speed = (0, self.max_speed)
+            self.speed = self.max_speed
+        if event.key == self.buttons[self.number]['down']:
             self.dir = self.game.DOWN
-        if event.key == pygame.K_LEFT:
-            self.speed = (-self.max_speed, 0)
+            self.speed = self.max_speed
+        if event.key == self.buttons[self.number]['left']:
             self.dir = self.game.LEFT
-        if event.key == pygame.K_RIGHT:
-            self.speed = (self.max_speed, 0)
+            self.speed = self.max_speed
+        if event.key == self.buttons[self.number]['right']:
             self.dir = self.game.RIGHT
-        if event.key == pygame.K_SPACE:
-            self.game.items.append(movables.Bullet(self.game, self.x + self.w//2 ,self.y -1 , self.dir))
-    #todo shooting with holding space
-    #todo cooldown for shooting
+            self.speed = self.max_speed
+
+        if event.key == self.buttons[self.number]['shoot']:
+            if self.cool_down < 0:
+                self.game.bullets.add([movables.Bullet(self.game, self.rect.centerx, self.rect.centery, self.dir, True)])
+                self.cool_down = self.max_cool_down
+
+    def think(self):
+        if self.immortality > 0:
+            self.immortality -= 1
+            if self.immortality == 0:
+                self.imm_anim.die()
+
     def donot(self, event):
-        if event.key == pygame.K_UP: #273 код клавиши вверх
-            self.speed = ( self.speed[0], 0)
-        if event.key == pygame.K_DOWN:
-            self.speed = ( self.speed[0], 0)
-        if event.key == pygame.K_LEFT:
-            self.speed = (0, self.speed[1])
-        if event.key == pygame.K_RIGHT:
-            self.speed = (0, self.speed[1])
+        if event.key == self.buttons[self.number]['up']:
+            if self.dir == self.game.UP:
+                self.speed = 0
+        if event.key == self.buttons[self.number]['down']:
+            if self.dir == self.game.DOWN:
+                self.speed = 0
+        if event.key == self.buttons[self.number]['left']:
+            if self.dir == self.game.LEFT:
+                self.speed = 0
+        if event.key == self.buttons[self.number]['right']:
+            if self.dir == self.game.RIGHT:
+                self.speed = 0
 
-    def move(self):
-        self.old_pos = self.pos
+    def die(self):
+        if not self.immortality:
+            self.game.player_die(self.number)
 
-        self.x += self.speed[0]
-        self.y += self.speed[1]
-
-    def interact(self, other):
-        if isinstance(other, items.Wall):
-            self.x = self.old_pos[0]
-            self.y = self.old_pos[1]
-
-
-
-
-    def draw(self):
-        self.game.draw(self.img, (self.x, self.y))
+    def immortal(self):
+        self.immortality = 20
+        self.imm_anim = items.ImmortalAnim(self.game,0,0)
+        self.imm_anim.rect = self.rect
